@@ -40,7 +40,7 @@ the list at [http://en.wikipedia.org/wiki/List_of_data_structures](http://en.wik
 If you're feeling frisky, do it again.  Either better somehow or with a different choice.
 
 
-###Release 2 : Open source
+###Release 2 : Go Public
 
 Go exploring for public repositories that have data structures you can learn from.
 
