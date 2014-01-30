@@ -7,7 +7,7 @@ class Stack
   end
  
   def push(x)
-    raise "Stack Overflow - The stack is full" if @store.size >= @max_size
+    raise "Stack Overflow - The stack is full" if self.full?
     @store.push x
   end
  
@@ -27,6 +27,7 @@ class Stack
   def full?
     @store.size == @max_size
   end
+  
 end
 
 
