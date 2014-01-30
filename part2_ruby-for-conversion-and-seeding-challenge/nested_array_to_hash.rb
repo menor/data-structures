@@ -7,11 +7,10 @@ roster = [["Number", "Name", "Position", "Points per Game"],
 
 def convert_roster_format(roster)
   titles = roster.shift
-  player_data = roster.shift
-  #roster.map! { |player_data| titles.zip(player_data) }
-  prepared_roster = titles.zip(player_data)
-  p prepared_roster
-  Hash(prepared_roster)
+  hashed_roster = []
+  roster.map! { |player_data| titles.zip(player_data) }
+  roster.each_index {|i| hashed_roster << Hash[roster[i]]}
+  hashed_roster
 end
 
 
@@ -20,9 +19,8 @@ end
 
 # DRIVER CODE
 hashed_roster = convert_roster_format(roster)
+p hashed_roster[2] # { "Number" => 31, "Name" => "Harvey Kay", "Position" => "Shooting Guard", "Points per Game" => [0, 30, 16, 0, 25] }
 
-hashed_roster[2]
-# => { "Number" => 31, "Name" => "Harvey Kay", "Position" => "Shooting Guard", "Points per Game" => [0, 30, 16, 0, 25] }
 
-# puts hashed_roster[0]["Name"] == "Joe Schmo"   # outputs true
+puts hashed_roster[0]["Name"] == "Joe Schmo"   # outputs true
 
