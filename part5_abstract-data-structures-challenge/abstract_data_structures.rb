@@ -24,7 +24,7 @@ end
 
 # DRIVER CODE
 graph = Graph.new('Kevin Bacon')
-
+{'Man without a Shadow' => ['Kevin Bacon','Elisabeth Shue,', 'David Hasselhoff']}
 graph.add_edge('Man without Shadow', 'Kevin Bacon', 'Elisabeth Shue')
 graph.adjacent?('Kevin Bacon', 'Elisabeth Shue') # true
 graph.neighbors?(vertice)
